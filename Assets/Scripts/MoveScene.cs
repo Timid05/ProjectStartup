@@ -9,6 +9,10 @@ public class MoveScene : MonoBehaviour
     AppManager manager;
     [SerializeField]
     GameObject currentScreen;
+    [SerializeField]
+    Animator animator;
+    [SerializeField]
+    float delayTime;
 
     private void Start()
     {
@@ -28,5 +32,18 @@ public class MoveScene : MonoBehaviour
         nextScreen.SetActive(true);
         currentScreen.SetActive(false);
         currentScreen = nextScreen;
+    }
+
+    void Delay()
+    {
+        StartCoroutine(DelayRoutine());
+    }
+
+    IEnumerator DelayRoutine()
+    {
+        yield return new WaitForSeconds(delayTime);
+        
+        yield return new WaitForSeconds(0.3f);
+        animator.SetTrigger("symptoms_opened");
     }
 }

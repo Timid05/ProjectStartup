@@ -207,6 +207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScreen: {fileID: 0}
+  animator: {fileID: 6318623299837656152}
+  delayTime: 0
 --- !u!114 &6675169291359891871
 MonoBehaviour:
   m_ObjectHideFlags: 0
