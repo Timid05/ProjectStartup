@@ -1,9 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:engine="UnityEngine.UIElements"
-    xmlns:editor="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
->
-    
-</engine:UXML>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Header.uss?fileID=7433441132597879392&amp;guid=08ce8eab8dc5fbb43b3374482f885c60&amp;type=3#Header" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; background-color: rgba(29, 27, 27, 0); -unity-font-definition: initial;">
+        <ui:Label tabindex="-1" text="Tail-Safe" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Header" class="Header" style="-unity-text-align: upper-center; top: 10%; color: rgb(238, 236, 216); align-items: stretch;" />
+        <ui:VisualElement style="flex-grow: 1; color: rgb(236, 168, 129);" />
+    </ui:VisualElement>
+</ui:UXML>
