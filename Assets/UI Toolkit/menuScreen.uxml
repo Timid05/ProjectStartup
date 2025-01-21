@@ -1,7 +1,10 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Header.uss?fileID=7433441132597879392&amp;guid=08ce8eab8dc5fbb43b3374482f885c60&amp;type=3#Header" />
-    <ui:VisualElement name="Container" style="flex-grow: 1; background-color: rgba(29, 27, 27, 0); -unity-font-definition: initial;">
-        <ui:Label tabindex="-1" text="Tail-Safe" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Header" class="Header" style="-unity-text-align: upper-center; top: 10%; color: rgb(238, 236, 216); align-items: stretch;" />
-        <ui:VisualElement style="flex-grow: 1; color: rgb(236, 168, 129);" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; background-color: rgb(28, 27, 29); -unity-font-definition: initial;">
+        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="settings" style="background-image: url(&quot;project://database/Assets/Images/settings-svgrepo-com%201.png?fileID=2800000&amp;guid=742bb9103d2a27347b80a5175e599b85&amp;type=3#settings-svgrepo-com 1&quot;); background-color: rgba(188, 188, 188, 0); width: 150px; height: 150px; left: 70px; top: 80px;" />
+        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Tokens" style="width: 150px; height: 150px; top: -75px; background-image: url(&quot;project://database/Assets/Images/coins-alt-svgrepo-com%201.png?fileID=2800000&amp;guid=0b3033074f77f004eacbca61e8081261&amp;type=3#coins-alt-svgrepo-com 1&quot;); background-color: rgba(188, 188, 188, 0); left: 1064px;" />
+        <ui:Label tabindex="-1" text="Tail-Safe" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Header" class="Header" style="-unity-text-align: upper-center; top: 16%; color: rgb(238, 236, 216); align-items: center; width: auto; align-self: center; font-size: 250px;" />
+        <ui:VisualElement style="flex-grow: 1; color: rgb(236, 168, 129); background-image: url(&quot;project://database/Assets/Images/mascots%20png%201.png?fileID=2800000&amp;guid=c308869cff3603a458e2da3f4dd4776b&amp;type=3#mascots png 1&quot;); height: auto; width: auto; scale: 0.7 0.7; top: 15%; justify-content: center;" />
+        <ui:VisualElement style="flex-grow: 1; height: 0; scale: 1 0.25; bottom: auto; justify-content: flex-start; transform-origin: bottom; background-color: rgb(236, 168, 129); border-top-left-radius: 250px; border-top-right-radius: 250px;" />
     </ui:VisualElement>
 </ui:UXML>
