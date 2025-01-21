@@ -1,0 +1,8 @@
+.header {
+    font-size: 75px;
+    align-items: stretch;
+    position: relative;
+    left: 25%;
+    align-self: center;
+    justify-content: flex-start;
+}

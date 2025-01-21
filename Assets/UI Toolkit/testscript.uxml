@@ -1,9 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:engine="UnityEngine.UIElements"
-    xmlns:editor="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
->
-    
-</engine:UXML>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/menu%20and%20that.uss?fileID=7433441132597879392&amp;guid=5287c768eac10544db4c3107dacd0a8e&amp;type=3#menu and that" />
+    <ui:VisualElement name="contentHolder" style="flex-grow: 1; background-color: rgb(201, 44, 44);">
+        <ui:Label tabindex="-1" text="Sigma Sigma on the wall, who is the &#10;skibbiest of them all" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" class="header" style="-unity-font: resource(&apos;Fonts &amp; Materials/BLUECHERIES&apos;); -unity-font-definition: initial; left: 0; align-items: center; width: 1000px; -unity-text-align: middle-left; white-space: normal; top: 10%; color: rgb(255, 255, 255); -unity-background-scale-mode: stretch-to-fill; transform-origin: center; rotate: 0; translate: 153px 0;" />
+    </ui:VisualElement>
+</ui:UXML>
