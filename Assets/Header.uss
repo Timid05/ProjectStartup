@@ -3,3 +3,17 @@
     -unity-font-definition: initial;
     font-size: 170px;
 }
+
+.Icon {
+    width: 150px;
+    height: 150px;
+}
+
+.NavButton {
+    width: 10%;
+    height: 50%;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
