@@ -5,4 +5,29 @@
     left: 25%;
     align-self: center;
     justify-content: flex-start;
+    color: rgb(238, 236, 216);
+    -unity-font: resource('Fonts & Materials/BLUECHERIES');
+    -unity-font-definition: initial;
+    -unity-text-align: upper-center;
+}
+
+.contentBox {
+    background-color: rgb(255, 255, 255);
+    -unity-background-image-tint-color: rgba(182, 48, 48, 0.96);
+    color: rgb(0, 0, 0);
+    width: 1156px;
+    height: 200px;
+    flex-shrink: 0;
+}
+
+.actionButton {
+    background-color: rgb(236, 168, 129);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    width: 300px;
+    max-height: 75px;
+    font-size: 50px;
+    height: auto;
 }
