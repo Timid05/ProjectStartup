@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Background
+  - cardmaker
+  - petoverview
+  - cardconfirm
+  - nopets
   layers:
   - Default
   - TransparentFX

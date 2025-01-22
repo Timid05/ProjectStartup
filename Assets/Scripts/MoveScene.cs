@@ -6,44 +6,12 @@ using UnityEngine.SceneManagement;
 public class MoveScene : MonoBehaviour
 {
     //reference to the manager
-    AppManager manager;
+    AppManager manager = AppManager.GetManager();
     [SerializeField]
     GameObject currentScreen;
-    [SerializeField]
-    Animator animator;
-    [SerializeField]
-    float delayTime;
 
-    private void Start()
+    public void UpdateScreen(GameObject nextScreen)
     {
-        manager = AppManager.GetManager();
-        manager.ChangeCurrentScene(SceneManager.GetActiveScene().name);
-    }
-
-    //method to load the desired scene
-    public void MoveToScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-        manager.ChangeCurrentScene(sceneName);
-    }
-
-    public void TransitionIntoScreen(GameObject nextScreen)
-    {
-        nextScreen.SetActive(true);
-        currentScreen.SetActive(false);
-        currentScreen = nextScreen;
-    }
-
-    void Delay()
-    {
-        StartCoroutine(DelayRoutine());
-    }
-
-    IEnumerator DelayRoutine()
-    {
-        yield return new WaitForSeconds(delayTime);
-        
-        yield return new WaitForSeconds(0.3f);
-        animator.SetTrigger("symptoms_opened");
+        manager.currentScreen = nextScreen.name;
     }
 }

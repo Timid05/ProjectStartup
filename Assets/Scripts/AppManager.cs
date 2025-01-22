@@ -8,7 +8,7 @@ using TMPro;
 public class AppManager : MonoBehaviour
 {
     [SerializeField]
-    string currentScene;
+    public string currentScreen;
     static AppManager manager = null;
 
     //singleton code, ensuring that there will only be one AppManager at a time
@@ -32,14 +32,9 @@ public class AppManager : MonoBehaviour
     }
 
     //for updating the current scene
-    public void ChangeCurrentScene(string sceneName)
+    public void ChangeCurrentScreen(string screenName)
     {
-        currentScene = sceneName;
+        currentScreen = screenName;
     }
 
-    //reads the input from the referenced field to the console
-    public void ReadInputField(TMP_InputField field)
-    {
-        Debug.Log("Input: " + field.text);
-    }
 }
