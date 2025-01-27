@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class InputReset : MonoBehaviour
@@ -15,6 +14,9 @@ public class InputReset : MonoBehaviour
 
     private void OnDisable()
     {
-        inputField.text = string.Empty;
+        if (inputField != null)
+        {
+            inputField.text = string.Empty;
+        }
     }
 }

@@ -9,6 +9,7 @@ public class AppManager : MonoBehaviour
 {
     [SerializeField]
     public string currentScreen;
+    public int tokenCount = 0;
     static AppManager manager = null;
 
     //singleton code, ensuring that there will only be one AppManager at a time
@@ -37,4 +38,15 @@ public class AppManager : MonoBehaviour
         currentScreen = screenName;
     }
 
+    //method to make sure the titlescreen doesn't slide in when starting the app
+    public void EnableTitleAnim(Animator animator)
+    {
+        animator.SetBool("appStart", false);
+    }
+
+    //method to change the amount of tokens the user possesses
+    public void AddTokens(int amount)
+    {
+        tokenCount = tokenCount + amount;
+    }
 }
