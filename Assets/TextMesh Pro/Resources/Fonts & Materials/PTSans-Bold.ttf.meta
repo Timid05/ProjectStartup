@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8c939e8f83030b44787acaca8d36e821
+guid: 98a5294f241afc940b4ceb652756242f
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Le Havre Rounded
+  - PT Sans
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

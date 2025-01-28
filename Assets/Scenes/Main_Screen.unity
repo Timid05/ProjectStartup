@@ -181,8 +181,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tips
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b9f1cf23a6d2a6b4eb02d1d2ef8b32a7, type: 2}
+  m_sharedMaterial: {fileID: -4224869688930707131, guid: b9f1cf23a6d2a6b4eb02d1d2ef8b32a7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -390,8 +390,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Diabetes Tips
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b9f1cf23a6d2a6b4eb02d1d2ef8b32a7, type: 2}
+  m_sharedMaterial: {fileID: -4224869688930707131, guid: b9f1cf23a6d2a6b4eb02d1d2ef8b32a7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1348,8 +1348,8 @@ MonoBehaviour:
     with insulin administration.\nWet vs. Dry Food: Wet food is often better than
     dry food as it tends to have fewer carbs."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d514927fde022114587d55d01796f360, type: 2}
-  m_sharedMaterial: {fileID: -3378035284542016512, guid: d514927fde022114587d55d01796f360, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3d2de5c9f101a314d88271ab27e8f69b, type: 2}
+  m_sharedMaterial: {fileID: 4286580323815499192, guid: 3d2de5c9f101a314d88271ab27e8f69b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1373,8 +1373,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1618,8 +1618,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tips
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b9f1cf23a6d2a6b4eb02d1d2ef8b32a7, type: 2}
+  m_sharedMaterial: {fileID: -4224869688930707131, guid: b9f1cf23a6d2a6b4eb02d1d2ef8b32a7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1752,8 +1752,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tips
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b9f1cf23a6d2a6b4eb02d1d2ef8b32a7, type: 2}
+  m_sharedMaterial: {fileID: -4224869688930707131, guid: b9f1cf23a6d2a6b4eb02d1d2ef8b32a7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5732,8 +5732,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Search for Product...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ce8d97f9b02e6694ea01b400329baceb, type: 2}
+  m_sharedMaterial: {fileID: -789222814665021068, guid: ce8d97f9b02e6694ea01b400329baceb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6418,8 +6418,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tips
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b9f1cf23a6d2a6b4eb02d1d2ef8b32a7, type: 2}
+  m_sharedMaterial: {fileID: -4224869688930707131, guid: b9f1cf23a6d2a6b4eb02d1d2ef8b32a7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7706,8 +7706,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tips
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b9f1cf23a6d2a6b4eb02d1d2ef8b32a7, type: 2}
+  m_sharedMaterial: {fileID: -4224869688930707131, guid: b9f1cf23a6d2a6b4eb02d1d2ef8b32a7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8530,8 +8530,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: English
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b9f1cf23a6d2a6b4eb02d1d2ef8b32a7, type: 2}
+  m_sharedMaterial: {fileID: -4224869688930707131, guid: b9f1cf23a6d2a6b4eb02d1d2ef8b32a7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
