@@ -85,7 +85,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6675169291359891871, guid: 1abb3dcf74380c94fbbefe411a694d49, type: 3}
+      - m_Target: {fileID: 5066647080401237000}
         m_TargetAssemblyTypeName: ChecklistHandler, Assembly-CSharp
         m_MethodName: ToggleChange
         m_Mode: 2
@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 1154971873436268314}
   - component: {fileID: 81972288150142538}
   - component: {fileID: 3960357586194182494}
+  - component: {fileID: 5066647080401237000}
   m_Layer: 5
   m_Name: Checklist
   m_TagString: Untagged
@@ -279,7 +280,7 @@ RectTransform:
   m_GameObject: {fileID: 727127958413759574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1952599, y: 1.1952599, z: 1.1952599}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 979789214353953717}
@@ -334,6 +335,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5066647080401237000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727127958413759574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886dc2d84a29146428043eb6f1177991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &834962396585761376
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,7 +893,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6675169291359891871, guid: 1abb3dcf74380c94fbbefe411a694d49, type: 3}
+      - m_Target: {fileID: 5066647080401237000}
         m_TargetAssemblyTypeName: ChecklistHandler, Assembly-CSharp
         m_MethodName: ToggleChange
         m_Mode: 2
@@ -1129,7 +1142,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6675169291359891871, guid: 1abb3dcf74380c94fbbefe411a694d49, type: 3}
+      - m_Target: {fileID: 5066647080401237000}
         m_TargetAssemblyTypeName: ChecklistHandler, Assembly-CSharp
         m_MethodName: ToggleChange
         m_Mode: 2
@@ -1306,7 +1319,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6675169291359891871, guid: 1abb3dcf74380c94fbbefe411a694d49, type: 3}
+      - m_Target: {fileID: 5066647080401237000}
         m_TargetAssemblyTypeName: ChecklistHandler, Assembly-CSharp
         m_MethodName: ToggleChange
         m_Mode: 2
@@ -1404,7 +1417,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6675169291359891871, guid: 1abb3dcf74380c94fbbefe411a694d49, type: 3}
+      - m_Target: {fileID: 5066647080401237000}
         m_TargetAssemblyTypeName: ChecklistHandler, Assembly-CSharp
         m_MethodName: ToggleChange
         m_Mode: 2
@@ -1735,7 +1748,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6675169291359891871, guid: 1abb3dcf74380c94fbbefe411a694d49, type: 3}
+      - m_Target: {fileID: 5066647080401237000}
         m_TargetAssemblyTypeName: ChecklistHandler, Assembly-CSharp
         m_MethodName: ToggleChange
         m_Mode: 2

@@ -3,10 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class ChecklistHandler : MonoBehaviour
 {
+    List<Toggle> toggles = new List<Toggle>();
     List<string> symptoms = new List<string>();
+
+    private void Start()
+    {
+        toggles = GetComponentsInChildren<Toggle>().ToList<Toggle>();
+    }
 
     //call on this method if you want the symptoms list written in the console
     public void PrintSymptoms()
@@ -20,7 +27,7 @@ public class ChecklistHandler : MonoBehaviour
         Text label = toggle.GetComponentInChildren<Text>();
 
         //if the toggle is checked, add the corresponding symptom to the list
-        if(toggle.isOn)
+        if (toggle.isOn)
         {
             symptoms.Add(label.text);
             Debug.Log("Added " + label.text + " to the symptoms list");
@@ -28,7 +35,7 @@ public class ChecklistHandler : MonoBehaviour
         else
         {
             //if unchecked, look if the symptom exists inside the list and remove it
-            for(int i = 0; i < symptoms.Count; i++)
+            for (int i = 0; i < symptoms.Count; i++)
             {
                 if (symptoms[i] == label.text)
                 {
@@ -36,6 +43,16 @@ public class ChecklistHandler : MonoBehaviour
                     Debug.Log("Removed " + label.text + " from the symptoms list");
                 }
             }
+        }
+    }
+
+    public void ResetChecklist()
+    {
+        symptoms.Clear();
+
+        foreach (Toggle toggle in toggles)
+        {
+            toggle.isOn = false;
         }
     }
 }

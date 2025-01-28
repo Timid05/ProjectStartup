@@ -14,7 +14,7 @@ public class PetsHandler : MonoBehaviour
     GameObject cardMaker;
     GameObject overview;
 
-    List<GameObject> cards;
+    public List<GameObject> cards;
 
     string petName;
     string petSpecies;

@@ -8,6 +8,7 @@ using TMPro;
 public class AppManager : MonoBehaviour
 {
     [SerializeField]
+    Image mascotImage;
     public string currentScreen;
     public int tokenCount = 0;
     static AppManager manager = null;
@@ -48,5 +49,11 @@ public class AppManager : MonoBehaviour
     public void AddTokens(int amount)
     {
         tokenCount = tokenCount + amount;
+    }
+
+    //Method for changing the image of the mascot on the homescreen
+    public void ChangeMascot(Sprite newImage)
+    {
+        mascotImage.sprite = newImage;
     }
 }
