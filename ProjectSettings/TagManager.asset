@@ -9,6 +9,10 @@ TagManager:
   - petoverview
   - cardconfirm
   - nopets
+  - mealOverview
+  - addMealScreen
+  - noMeal
+  - makeMealButton
   layers:
   - Default
   - TransparentFX
