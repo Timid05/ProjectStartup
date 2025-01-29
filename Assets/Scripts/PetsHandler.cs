@@ -7,12 +7,16 @@ using UnityEngine.UI;
 public class PetsHandler : MonoBehaviour
 {
     [SerializeField]
-    GameObject petScreen;
+    public GameObject petScreen;
     [SerializeField]
     GameObject cardPrefab;
+    [SerializeField]
+    GameObject expansionReturnButton;
     CardInfo cardInfo;
     GameObject cardMaker;
     GameObject overview;
+
+    public GameObject expandedCard;
 
     public List<GameObject> cards;
 
@@ -25,6 +29,7 @@ public class PetsHandler : MonoBehaviour
     bool speciesSelected;
     bool breedHasContent;
     bool sexSelected;
+    public bool cardExpanded;
 
     GameObject cardButton;
     GameObject noPetsText;
@@ -43,7 +48,7 @@ public class PetsHandler : MonoBehaviour
 
             if (noPetsText == null)
             {
-                Debug.Log("Petshandler didn't find 'no pets text'");
+                Debug.Log("Petshandler didn't find 'no pets textField'");
             }
 
             if (cardButton == null)
@@ -93,11 +98,17 @@ public class PetsHandler : MonoBehaviour
         }
     }
 
+    public void DestroyExpansion()
+    {
+        Destroy(expandedCard);
+        cardExpanded = false;
+    }
+
     public void SpeciesInput(TMP_Dropdown speciesField)
     {
         if (speciesField.captionText.text == "Dog" || speciesField.captionText.text == "Cat" || speciesField.captionText.text == "Bird")
         {
-            petSpecies = speciesField.captionText.text;           
+            petSpecies = speciesField.captionText.text;
             speciesSelected = true;
             Debug.Log("Species set to: " + petSpecies + ", " + speciesSelected);
         }
@@ -163,9 +174,14 @@ public class PetsHandler : MonoBehaviour
         UpdateCardPositions();
     }
 
+    public void ExpandCard(CardInfo info)
+    {
+
+    }
+
     void UpdateCardPositions()
     {
-       for (int i = 0; i < cards.Count; i++)
+        for (int i = 0; i < cards.Count; i++)
         {
             cards[i].transform.position = new Vector3(petScreen.transform.position.x, (petScreen.transform.position.y + 700) - (i * 550), 0);
         }
@@ -203,6 +219,17 @@ public class PetsHandler : MonoBehaviour
         {
             cardButton.SetActive(false);
         }
-    
+
+        if (!expansionReturnButton.activeSelf && cardExpanded)
+        {
+            expansionReturnButton.SetActive(true);
+        }
+
+        if (expansionReturnButton.activeSelf && !cardExpanded)
+        {
+            expansionReturnButton.SetActive(false);
+        }
+
+
     }
 }

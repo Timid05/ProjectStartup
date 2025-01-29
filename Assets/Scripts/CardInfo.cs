@@ -8,6 +8,8 @@ public class CardInfo : MonoBehaviour
 {
     AppManager manager;
     PetsHandler petsHandler;
+    [SerializeField]
+    GameObject expandedPrefab;
 
     [SerializeField]
     TextMeshProUGUI nameBox;
@@ -27,10 +29,20 @@ public class CardInfo : MonoBehaviour
     [SerializeField]
     Sprite birdSprite;
 
+    public string cardSpecies;
+    public string cardName;
+
+    CardInfo expansionInfo;
+
     private void Start()
     {
         manager = AppManager.GetManager();
         petsHandler = manager.GetComponent<PetsHandler>();
+
+        if (expandedPrefab != null )
+        {
+            expansionInfo = expandedPrefab.GetComponent<CardInfo>();
+        }
     }
 
     public void RemoveButtonClick()
@@ -41,6 +53,7 @@ public class CardInfo : MonoBehaviour
     public void SetCardName(string name)
     {
         nameBox.text = name;
+        cardName = name;
     }
 
     public void SetCardBreed(string breed)
@@ -53,9 +66,11 @@ public class CardInfo : MonoBehaviour
         sexBox.text = sex;
     }
 
+
     public void SetCardSpecies(string species)
     {
         speciesBox.text = species;
+        cardSpecies = species;
 
         switch (species)
         {
@@ -71,6 +86,37 @@ public class CardInfo : MonoBehaviour
             default:
                 Debug.Log("pet species not recognized");
                 break;                
+        }
+    }
+
+    public void ExpandCard()
+    {
+        if (expandedPrefab != null)
+        {
+            Debug.Log("Expanding card");
+            TransferInfoToExpansion();
+            GameObject expandedCard = Instantiate(expandedPrefab, petsHandler.petScreen.transform.position, Quaternion.identity, petsHandler.petScreen.transform);
+            petsHandler.expandedCard = expandedCard;
+            petsHandler.cardExpanded = true;
+        }
+        else
+        {
+            Debug.Log("No expanded prefab has been assigned");
+        }
+    }
+
+    void TransferInfoToExpansion()
+    {
+        if (expansionInfo != null)
+        {
+            expansionInfo.SetCardName(nameBox.text);
+            expansionInfo.SetCardSpecies(speciesBox.text);
+            expansionInfo.SetCardBreed(breedBox.text);
+            expansionInfo.SetCardSex(sexBox.text);
+        }
+        else
+        {
+            Debug.Log("Cardinfo for expansion was not found");
         }
     }
 }

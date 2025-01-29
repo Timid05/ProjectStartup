@@ -7,18 +7,36 @@ using TMPro;
 public class FormHandler : MonoBehaviour
 {
     AppManager manager;
+    [SerializeField]
+    GameObject noPetsText;
+    [SerializeField]
+    GameObject vetPopup;
+    [SerializeField]
+    TextMeshProUGUI popupText;
     PetsHandler petsHandler;
     [SerializeField]
     GameObject profilePrefab;
+    ProfileInfo profileInfo;
+
+    ChecklistHandler checklistHandler;
 
     List<GameObject> profiles = new List<GameObject>();
-
-    [SerializeField]
     int oldCardCount;
+    public bool updateChecklist;
+
+    public GameObject lastClickedProfile;
 
     void Start()
     {
         manager = AppManager.GetManager();
+        
+        checklistHandler = GetComponentInChildren<ChecklistHandler>();
+
+        if (checklistHandler == null )
+        {
+            Debug.Log("checklisthandler not found");
+        }
+
         if (manager != null)
         {
             petsHandler = manager.GetComponent<PetsHandler>();
@@ -34,28 +52,117 @@ public class FormHandler : MonoBehaviour
         }
         else
         {
+            profileInfo = profilePrefab.GetComponent<ProfileInfo>();
             oldCardCount = petsHandler.cards.Count;
         }
+
+        vetPopup.SetActive(false);
     }
 
     private void UpdateProfiles()
     {
         if (petsHandler != null)
         {
+            for (int i = 0; i < profiles.Count; i++)
+            {
+                Destroy(profiles[i]);           
+            }
+
+            profiles.Clear();
+
             for (int i = 0; i < petsHandler.cards.Count; i++)
             {
-                GameObject newProfile = Instantiate(profilePrefab, new Vector3(885, 770, 0), Quaternion.identity, gameObject.transform);
+                SetProfile(i);
+                GameObject newProfile = Instantiate(profilePrefab, gameObject.transform.position + new Vector3(800 + i * 300, 700, 0), Quaternion.identity, gameObject.transform);             
                 profiles.Add(newProfile);
+                oldCardCount = petsHandler.cards.Count;
                 Debug.Log("Added profile to form");
             }
         }
     }
 
-    private void OnDisable()
+    void SetProfile(int cardIndex)
+    {
+        CardInfo cardInfo = petsHandler.cards[cardIndex].GetComponent<CardInfo>();
+
+        profileInfo.SetName(cardInfo.cardName);
+
+        switch (cardInfo.cardSpecies)
+        {
+            case "Dog":
+                profileInfo.SetToDog();
+                break;
+            case "Cat":
+                profileInfo.SetToCat();
+                break;
+            case "Bird":
+                profileInfo.SetToBird();
+                break;
+            default:
+                Debug.Log("no valid input given");
+                break;
+        }
+ 
+    }
+
+    private void DisableProfiles()
+    {
+        foreach(var profile in profiles)
+        {
+            profile.SetActive(false);
+        }
+    }
+
+    public void EnableProfiles()
+    {
+        foreach (var profile in profiles)
+        {
+            profile.SetActive(true);
+        }
+        vetPopup.SetActive(false);
+    }
+
+    public void FormSubmitted()
+    {         
+        Debug.Log(checklistHandler.symptoms.Count);
+        if (checklistHandler.symptoms.Count >= 2)
+        {
+            popupText.text = "go to vet lol";
+        }
+        else
+        {
+            popupText.text = "ur fine paranoid ass";
+        }
+        DisableProfiles();
+        vetPopup.SetActive(true);
+        lastClickedProfile = null;
+    }
+
+    private void Update()
     {
         if (petsHandler.cards.Count != oldCardCount)
         {
             UpdateProfiles();
+        }
+
+        if (lastClickedProfile == null && checklistHandler.gameObject.activeSelf)
+        {
+            checklistHandler.gameObject.SetActive(false);
+        }
+
+        if (!checklistHandler.gameObject.activeSelf && lastClickedProfile != null)
+        {
+            checklistHandler.gameObject.SetActive(true);
+        }
+
+        if (petsHandler.cards.Count == 0 && !noPetsText.activeSelf)
+        {
+            noPetsText.SetActive(true);
+        }
+
+        if (petsHandler.cards.Count > 0 && noPetsText.activeSelf)
+        {
+            noPetsText.SetActive(false);
         }
     }
 }

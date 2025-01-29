@@ -32,7 +32,7 @@ public class DropDownReset : MonoBehaviour
 
         if (defaultText == null)
         {
-            Debug.LogWarning("Please set dropdown default text");
+            Debug.LogWarning("Please set dropdown default textField");
         }
     }
 

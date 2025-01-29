@@ -7,11 +7,15 @@ using System.Linq;
 
 public class ChecklistHandler : MonoBehaviour
 {
+    [SerializeField]
+    FormHandler formHandler;
+
     List<Toggle> toggles = new List<Toggle>();
-    List<string> symptoms = new List<string>();
+    public List<string> symptoms = new List<string>();
 
     private void Start()
     {
+        formHandler = GetComponentInParent<FormHandler>();
         toggles = GetComponentsInChildren<Toggle>().ToList<Toggle>();
     }
 
@@ -48,11 +52,21 @@ public class ChecklistHandler : MonoBehaviour
 
     public void ResetChecklist()
     {
+        Debug.Log("resetting checklist");
         symptoms.Clear();
 
         foreach (Toggle toggle in toggles)
         {
             toggle.isOn = false;
+        }
+    }
+
+    private void Update()
+    {
+        if (formHandler.updateChecklist)
+        {
+            ResetChecklist();
+            formHandler.updateChecklist = false;
         }
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - petoverview
   - cardconfirm
   - nopets
+  - PetsScreen
   layers:
   - Default
   - TransparentFX
