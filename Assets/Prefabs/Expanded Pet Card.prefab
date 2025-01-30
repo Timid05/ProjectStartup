@@ -120,7 +120,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6736309024465771193}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5184121361681832681}
+        m_TargetAssemblyTypeName: CardInfo, Assembly-CSharp
+        m_MethodName: CalorieTrackerClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5184121361681832681}
+        m_TargetAssemblyTypeName: CardInfo, Assembly-CSharp
+        m_MethodName: DestroyExpansion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &300739792529071902
 GameObject:
   m_ObjectHideFlags: 0

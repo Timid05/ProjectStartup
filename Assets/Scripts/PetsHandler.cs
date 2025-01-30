@@ -12,6 +12,8 @@ public class PetsHandler : MonoBehaviour
     GameObject cardPrefab;
     [SerializeField]
     GameObject expansionReturnButton;
+    [SerializeField]
+    GameObject mealScreen;
     CardInfo cardInfo;
     GameObject cardMaker;
     GameObject overview;
@@ -69,6 +71,8 @@ public class PetsHandler : MonoBehaviour
             {
                 Debug.LogError("Pet screen does not contain overview");
             }
+
+            mealScreen.SetActive(false);
         }
     }
 
@@ -81,7 +85,14 @@ public class PetsHandler : MonoBehaviour
     public void ReturnToOverview()
     {
         cardMaker.SetActive(false);
+        mealScreen.SetActive(false);
         overview.SetActive(true);
+    }
+
+    public void MoveToMeals()
+    {
+        overview.SetActive(false);
+        mealScreen.SetActive(true);
     }
 
     public void NameInput(TMP_InputField namefield)
@@ -156,7 +167,7 @@ public class PetsHandler : MonoBehaviour
             cardInfo.SetCardBreed(petBreed);
             cardInfo.SetCardSex(petSex);
 
-            GameObject newCard = Instantiate(cardPrefab, new Vector3(petScreen.transform.position.x, (petScreen.transform.position.y + 900) - (cardsCount * 550), 0), new Quaternion(0, 0, 0, 0), overview.transform);
+            GameObject newCard = Instantiate(cardPrefab, new Vector3(petScreen.transform.position.x, (petScreen.transform.position.y + 800) - (cardsCount * 550), 0), new Quaternion(0, 0, 0, 0), overview.transform);
             cards.Add(newCard);
             cardsCount++;
             ReturnToOverview();

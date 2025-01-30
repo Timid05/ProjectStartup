@@ -89,6 +89,17 @@ public class CardInfo : MonoBehaviour
         }
     }
 
+    public void CalorieTrackerClick()
+    {
+        petsHandler.MoveToMeals();
+    }
+
+    public void DestroyExpansion()
+    {
+        Destroy(gameObject);
+        petsHandler.cardExpanded = false;
+    }
+
     public void ExpandCard()
     {
         if (expandedPrefab != null)

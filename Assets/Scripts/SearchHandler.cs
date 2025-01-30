@@ -43,6 +43,11 @@ public class SearchHandler : MonoBehaviour
         searchField.text = string.Empty;
     }
 
+    public void HideScrollView()
+    {
+        scrollView.SetActive(false);
+    }
+
     public void ToggleScrollView()
     {
 
