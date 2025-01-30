@@ -15,7 +15,6 @@ public class ChecklistHandler : MonoBehaviour
 
     private void Start()
     {
-        formHandler = GetComponentInParent<FormHandler>();
         toggles = GetComponentsInChildren<Toggle>().ToList<Toggle>();
     }
 
