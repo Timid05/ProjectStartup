@@ -33,7 +33,7 @@ public class TokenText : MonoBehaviour
     {
         if (manager.tokenCount != oldTokenCount)
         {
-            tokenText.text = "Tokens: " + manager.tokenCount;
+            tokenText.text = manager.tokenCount.ToString();
             oldTokenCount = manager.tokenCount;
         }
     }

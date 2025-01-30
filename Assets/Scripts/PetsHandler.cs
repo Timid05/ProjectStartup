@@ -95,6 +95,12 @@ public class PetsHandler : MonoBehaviour
         mealScreen.SetActive(true);
     }
 
+    public void BackToCards()
+    {
+        mealScreen.SetActive(false);
+        overview.SetActive(true);
+    }
+
     public void NameInput(TMP_InputField namefield)
     {
         if (!string.IsNullOrEmpty(namefield.text))
@@ -167,7 +173,7 @@ public class PetsHandler : MonoBehaviour
             cardInfo.SetCardBreed(petBreed);
             cardInfo.SetCardSex(petSex);
 
-            GameObject newCard = Instantiate(cardPrefab, new Vector3(petScreen.transform.position.x, (petScreen.transform.position.y + 800) - (cardsCount * 550), 0), new Quaternion(0, 0, 0, 0), overview.transform);
+            GameObject newCard = Instantiate(cardPrefab, new Vector3(petScreen.transform.position.x, (petScreen.transform.position.y + 700) - (cardsCount * 550), 0), new Quaternion(0, 0, 0, 0), overview.transform);
             cards.Add(newCard);
             cardsCount++;
             ReturnToOverview();

@@ -16,6 +16,8 @@ public class FormHandler : MonoBehaviour
     PetsHandler petsHandler;
     [SerializeField]
     GameObject profilePrefab;
+    [SerializeField]
+    GameObject backButton;
     ProfileInfo profileInfo;
 
     ChecklistHandler checklistHandler;
@@ -57,6 +59,16 @@ public class FormHandler : MonoBehaviour
         }
 
         vetPopup.SetActive(false);
+    }
+
+    public void DisableBackButton()
+    {
+        backButton.SetActive(false);
+    }
+
+    public void EnableBackButton()
+    {
+        backButton.SetActive(true);
     }
 
     private void UpdateProfiles()
@@ -113,6 +125,13 @@ public class FormHandler : MonoBehaviour
         }
     }
 
+    public void ResetPage()
+    {
+        EnableProfiles();
+        vetPopup.SetActive(false);
+
+    }
+
     public void EnableProfiles()
     {
         foreach (var profile in profiles)
@@ -124,14 +143,13 @@ public class FormHandler : MonoBehaviour
 
     public void FormSubmitted()
     {         
-        Debug.Log(checklistHandler.symptoms.Count);
-        if (checklistHandler.symptoms.Count >= 2)
+        if (checklistHandler.symptomCount >= 2)
         {
-            popupText.text = "go to vet lol";
+            popupText.text = "Please go to the vet";
         }
         else
         {
-            popupText.text = "ur fine paranoid ass";
+            popupText.text = "You do not need to go to the vet";
         }
         DisableProfiles();
         vetPopup.SetActive(true);

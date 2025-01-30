@@ -185,7 +185,7 @@ public class MealHandler : MonoBehaviour
             mealInfo.setCardFat(fatCount);
             mealInfo.setCardProtein(proteinCount);
 
-            GameObject newMeal = Instantiate(mealCardPrefab, new Vector3(mealScreen.transform.position.x, (mealScreen.transform.position.y + 450) - (mealCount * 550), 0), new Quaternion(0, 0, 0, 0), mealOverview.transform);
+            GameObject newMeal = Instantiate(mealCardPrefab, new Vector3(mealScreen.transform.position.x + 100, (mealScreen.transform.position.y + 350) - (mealCount * 470), 0), new Quaternion(0, 0, 0, 0), mealOverview.transform);
             meals.Add(newMeal);
             mealCount++;
             

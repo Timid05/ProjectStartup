@@ -1219,18 +1219,18 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: -3675690314539762782}
-    second:
-    - {fileID: -857566944871194376}
   - first: {fileID: -8839466331157564855}
     second:
     - {fileID: 3186849812037621170}
-  - first: {fileID: 3706025035478111639}
+  - first: {fileID: -3675690314539762782}
     second:
-    - {fileID: -5028069139968887506}
+    - {fileID: -857566944871194376}
   - first: {fileID: -623414633805807150}
     second:
     - {fileID: 7610060258075554172}
+  - first: {fileID: 3706025035478111639}
+    second:
+    - {fileID: -5028069139968887506}
   - first: {fileID: 4005621765207834087}
     second:
     - {fileID: -7917397576785453955}

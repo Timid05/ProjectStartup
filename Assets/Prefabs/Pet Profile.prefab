@@ -226,9 +226,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1571484963542057163}
   nameField: {fileID: 5613696849816853054}
-  dogIcon: {fileID: 21300000, guid: 4ec66627d9c20da4f82bb56f002490bc, type: 3}
-  catIcon: {fileID: 21300000, guid: 6d26e16b5e534f34baa05b2ca0e8b8bc, type: 3}
-  birdIcon: {fileID: 21300000, guid: f131c5ad719148049a7f5e5a0e093275, type: 3}
+  dogIcon: {fileID: 21300000, guid: c620229b500ebf04f84bcceb7129a65b, type: 3}
+  catIcon: {fileID: 21300000, guid: 4bbce1cc0d56eab4f9fe1bbc1e889058, type: 3}
+  birdIcon: {fileID: 21300000, guid: 2265e972a98f7e84aaa290b7b0687a61, type: 3}
 --- !u!114 &4024030995904869169
 MonoBehaviour:
   m_ObjectHideFlags: 0

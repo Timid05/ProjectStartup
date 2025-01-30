@@ -20,8 +20,8 @@ public class ShopHandler : MonoBehaviour
         ShopItemInfo itemInfo = shopItem.GetComponent<ShopItemInfo>();
         if (HasEnoughTokens(shopItem, itemInfo))
         {
-            manager.AddTokens(-itemInfo.tokenPrice);
-            manager.ChangeMascot(CosmeticSprite(itemInfo.cosmeticName));
+            //manager.AddTokens(-itemInfo.tokenPrice);
+           // manager.ChangeMascot(CosmeticSprite(itemInfo.cosmeticName));
             Debug.Log("Bought " + itemInfo.cosmeticName);
             shopItem.gameObject.SetActive(false);
         }
